@@ -18,7 +18,9 @@ https://www.red5labs.com/project.php?slug=hashkitteh
 - 📤 **Results Export**: Export cracked passwords in CSV, JSON, or TXT formats
 - 🎨 **Dark Mode**: Beautiful dark theme optimized for extended use
 
-![Main Dashboard](https://github.com/red5labs/hashkitteh/blob/main/public/hashkitteh_logo.png?raw=true)
+
+![Main Dashboard](https://github.com/red5labs/hashkitteh/blob/main/public/1_Dashboard.png?raw=true)
+
 
 ## Prerequisites
 
@@ -155,6 +157,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
+
 
 
 
