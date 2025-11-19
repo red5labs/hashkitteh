@@ -2,7 +2,7 @@
 
 A modern, user-friendly Windows desktop GUI application for hashcat password recovery tool built with Electron, React, TypeScript, and Tailwind CSS.
 
-![Main Dashboard](image-url)
+![Main Dashboard](https://github.com/red5labs/hashkitteh/blob/main/public/hashkitteh_logo.png?raw=true)
 
 # File Download
 
@@ -153,6 +153,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
+
 
 
 
