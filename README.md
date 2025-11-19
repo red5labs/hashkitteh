@@ -1,6 +1,6 @@
 # hashkitteh Hashcat GUI
 
-A modern, user-friendly desktop GUI application for hashcat password recovery tool built with Electron, React, TypeScript, and Tailwind CSS.
+A modern, user-friendly Windows desktop GUI application for hashcat password recovery tool built with Electron, React, TypeScript, and Tailwind CSS.
 
 # File Download
 
@@ -136,6 +136,10 @@ The project uses:
 - `tailwindcss` for styling
 - `zustand` for state management
 
+## Roadmap
+
+Future versions for Linux and Mac may be available.
+
 ## License
 
 MIT
@@ -147,6 +151,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
+
 
 
 
