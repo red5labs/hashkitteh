@@ -18,51 +18,15 @@ https://www.red5labs.com/project.php?slug=hashkitteh
 
 ## Prerequisites
 
-You must have the hashcat binaries downloaded somewhere on your machine.
+- **Hashcat** installed on the target system (or bundled with the app)
+
 You can find them here: https://hashcat.net/hashcat/
 
-### For Development (All Platforms)
-- **Node.js 18+** and npm (download from [nodejs.org](https://nodejs.org/))
-- **Git** (optional, for cloning the repository)
-
-### For Windows 11
-✅ **No additional software needed!** Electron works out of the box with just Node.js.
-
-Optional (only if you encounter native module compilation issues):
-- **Visual Studio Build Tools**
-  - Download from: https://visualstudio.microsoft.com/downloads/
-  - Select "Desktop development with C++" workload
-
-### For macOS
-- **Xcode Command Line Tools** (usually installed automatically)
-  - If not: `xcode-select --install`
-
-### For Linux
-- **Build essentials** (varies by distribution):
-  - Ubuntu/Debian: `sudo apt-get install build-essential`
-  - Fedora: `sudo dnf install @development-tools`
-  - Arch: `sudo pacman -S base-devel`
-
-### Runtime Requirements
-- **Hashcat** installed on the target system (or bundled with the app)
 - **GPU drivers** (for GPU acceleration with hashcat)
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/red5labs/hashkitteh.git
-cd hashkitteh
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start development server:
-```bash
-npm run dev
+No installation required. Just run the executable file.
 ```
 
 ## Quick Start
@@ -73,54 +37,6 @@ npm run dev
 4. In **Attack Config**, pick a dictionary (ideally tens of thousands of entries or more), optional mask/rules, and adjust workload.
 5. Use the **Force CPU-Only** and **Disable GPU Hardware Monitoring** toggles if your drivers lack OpenCL/CUDA or expose limited NVML sensors.
 6. Head to **Execute**, verify the auto-built hashcat command, and start the attack while monitoring console output and progress.
-
-## Building for Production
-
-### Development Build
-```bash
-npm run build
-```
-The built application will be in the `dist` and `dist-electron` directories.
-
-### Production Builds (Cross-Platform)
-
-Build for your current platform:
-```bash
-# Windows
-npm run build:win
-
-# macOS
-npm run build:mac
-
-# Linux
-npm run build:linux
-
-# All platforms (requires all build tools)
-npm run build:all
-```
-
-Built installers will be in the `release` directory:
-- **Windows**: `.exe` installer and portable `.exe`
-- **macOS**: `.dmg` file
-- **Linux**: `.AppImage` and `.deb` package
-
-### Platform-Specific Notes
-
-**Windows:**
-- Builds create both an installer (NSIS) and a portable executable
-- No code signing by default (add certificate for distribution)
-- Works on Windows 7+ (tested on Windows 11)
-
-**macOS:**
-- Requires macOS 10.13+ (High Sierra or later)
-- Builds for both Intel (x64) and Apple Silicon (arm64)
-- Code signing and notarization recommended for distribution
-- May require Apple Developer account for distribution outside App Store
-
-**Linux:**
-- Creates AppImage (universal) and Debian package
-- AppImage works on most distributions without installation
-- Debian package requires `.deb` support
 
 ## Configuration
 
@@ -232,6 +148,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
+
 
 
 
