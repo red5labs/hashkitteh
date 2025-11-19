@@ -5,7 +5,7 @@ A modern, user-friendly desktop GUI application for hashcat password recovery to
 ## Features
 
 - 🎯 **Modern UI**: Clean, dark-themed interface with intuitive navigation
-- 🔍 **Hash Input**: Support for pasting hashes or uploading hash files with auto-detection
+- 🔍 **Hash Input**: Paste hashes or import lists / `.22000` Wi-Fi handshakes with auto-detected hash modes
 - ⚙️ **Multiple Attack Modes**: Dictionary, Combinator, Brute-force, and Hybrid attacks
 - 📊 **Real-time Monitoring**: Live progress tracking with speed, time, and recovery statistics
 - 💾 **Session Management**: Save and restore your work sessions
@@ -44,8 +44,8 @@ Optional (only if you encounter native module compilation issues):
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd hashcat-gui
+git clone https://github.com/red5labs/hashkitteh.git
+cd hashkitteh
 ```
 
 2. Install dependencies:
@@ -57,6 +57,15 @@ npm install
 ```bash
 npm run dev
 ```
+
+## Quick Start
+
+1. Open **Settings** and point **Hashcat Binary Path** to your `hashcat` executable.
+2. Convert any captured Wi-Fi handshakes (`.pcap/.pcapng`) into Hashcat’s `.22000` format with `hcxpcapngtool capture.pcapng -o handshake.22000`.
+3. In **Hash Input**, paste hashes or upload your `.22000` file; the app will auto-detect hash mode 22000.
+4. In **Attack Config**, pick a dictionary (ideally tens of thousands of entries or more), optional mask/rules, and adjust workload.
+5. Use the **Force CPU-Only** and **Disable GPU Hardware Monitoring** toggles if your drivers lack OpenCL/CUDA or expose limited NVML sensors.
+6. Head to **Execute**, verify the auto-built hashcat command, and start the attack while monitoring console output and progress.
 
 ## Building for Production
 
@@ -126,11 +135,22 @@ Before using the application, configure the hashcat binary path in Settings:
    - Select attack mode (Dictionary, Brute-force, etc.)
    - Configure wordlist, rules, or mask patterns
    - Set workload profile and other advanced options
+   - Toggle **Disable GPU Hardware Monitoring** if your GPU driver reports errors such as `nvmlDeviceGetFanSpeed(): Not Supported`
 4. **Execute Tab**:
    - Review configuration
    - Click "Start" to begin the attack
    - Monitor progress in real-time
    - View console output
+
+### WPA/WPA2 Handshake Files (.22000)
+
+1. Convert your `.pcap`/`.pcapng` capture into Hashcat's 22000 format (PMKID/EAPOL) with a tool such as [`hcxpcapngtool`](https://github.com/ZerBea/hcxtools):
+   ```bash
+   hcxpcapngtool capture.pcapng -o handshake.22000
+   ```
+2. In **Hash Input**, choose **Upload Hash / .22000 File** and select the converted file (`.22000` or `.hc22000`).
+3. Hashkitteh will auto-detect the hash type as **WPA/WPA2 PMKID+EAPOL (mode 22000)** so you can immediately configure your attack (typically dictionary or hybrid).
+4. Continue configuring wordlists/masks as usual and start the attack.
 
 ### Viewing Results
 
@@ -204,5 +224,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-For issues and questions, please open an issue on the repository.
+For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
 
