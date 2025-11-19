@@ -18,16 +18,15 @@ https://www.red5labs.com/project.php?slug=hashkitteh
 
 ## Prerequisites
 
-- **Hashcat** installed on the target system (or bundled with the app)
+- **Hashcat** installed on the target system
 
 You can find them here: https://hashcat.net/hashcat/
 
-- **GPU drivers** (for GPU acceleration with hashcat)
+- **GPU drivers** for GPU acceleration with hashcat (GPU acceleration can be disabled in Settings)
 
 ## Installation
 
 No installation required. Just run the executable file.
-```
 
 ## Quick Start
 
@@ -148,6 +147,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue at https://github.com/red5labs/hashkitteh/issues.
+
 
 
 
